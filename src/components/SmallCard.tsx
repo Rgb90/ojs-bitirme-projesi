@@ -10,8 +10,8 @@ export interface SmallCardProps {
 
 function SmallCard({ src, alt, title, description, comment, price }: SmallCardProps) {
   return (
-    <div className="flex flex-col items-center p-4 w-48 h-72 m-2">
-    <img src={src} alt={alt} className="w-42 h-42 object-cover mb-0.5" />
+    <div className="flex flex-col items-center p-4 m-2">
+    <img src={src} alt={alt} className="object-cover mb-0.5 sm:w-[147px] sm:h-[147px] md:w-[210px] md:h-[210px] lg:w-[168px] lg:h-[168px]" />
     <h3 className="text-sm font-semibold font-inter text-center">{title}</h3>
     <p className="text-xs font-light text-gray-500 mb-1 text-center">{description}</p>
     <div className="flex mb-1">
