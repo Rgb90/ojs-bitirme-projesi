@@ -1,5 +1,5 @@
 export { default as Root } from "./root";
-export { default as HomePage } from "./HomePage";
-export { default as CartPage } from "./CartPage";
-export { default as AccountPage } from "./AccountPage";
+export { default as HomePage } from "./homepage/HomePage";
+export { default as CartPage } from "./cartpage/CartPage";
+export { default as AccountPage } from "./accountpage/AccountPage";
  
