@@ -27,7 +27,7 @@ const MenuInfo: MenuInfoProps[] = [
     { id: 3, title: "İLETİŞİM" },
 ];
 
-const MenuMobil = () => {
+const MenuNavbarMobil = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -102,4 +102,4 @@ const MenuMobil = () => {
     );
 };
 
-export default MenuMobil;
+export default MenuNavbarMobil;

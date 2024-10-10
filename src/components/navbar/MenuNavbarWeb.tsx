@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 
-const NavbarMenu = () => {
+const MenuNavbarWeb = () => {
 
   return (
     <div className="bg-black hidden md:block">
-      <div className="container mx-auto p-2">
-        <ul className="flex justify-between space-x-4">
+      <div className="container mx-auto max-w-7xl p-2">
+        <ul className="flex justify-center items-center space-x-2 sm:space-x-6 md:space-x-10 lg:space-x-36 mx-auto">
 
           {/* Menüler */}
           <Menu as="div" className="relative inline-block">
@@ -124,4 +124,4 @@ const NavbarMenu = () => {
   );
 };
 
-export default NavbarMenu;
+export default MenuNavbarWeb;

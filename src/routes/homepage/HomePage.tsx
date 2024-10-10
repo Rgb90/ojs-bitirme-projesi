@@ -7,6 +7,7 @@ import menuImg5 from "../../assets/gida.png";
 import menuImg6 from "../../assets/tüm-ürünler.png";
 import figure from "../../assets/figure.png";
 import logobeyaz from "../../assets/logo-beyaz.png";
+import ProductCategories from "./components/ProductCategories";
 import BestSellProducts from "./components/BestSellProducts";
 
 function HomePage() {
@@ -30,35 +31,11 @@ function HomePage() {
             className="w-full h-auto object-cover"
           />
         </div>
-
-        {/* Grid yapısı */}
-        <div className="container mx-auto text-white p-6 w-full max-w-[1300px] h-auto mb-4">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {menuImgs.map((image, index) => (
-              <div key={index} className="relative p-2">
-                <img
-                  src={image.src}
-                  alt={`Small Image ${index + 1}`}
-                  className="w-full h-auto rounded-md"
-                />
-                <div className="absolute top-1/2 transform -translate-y-1/2 right-4 lg:right-24 uppercase text-black text-sm md:text-xl lg:text-3xl font-bold">
-                  {image.text}
-                </div>
-                <button
-                  className="absolute top-3/4 transform -translate-y-1/2 right-4 lg:right-10 bg-black text-white px-4 py-1 md:px-6 md:py-1 lg:px-12 lg:py-2 rounded-lg font-bold"
-                  onClick={() => alert(`Button on Image ${index + 1} clicked`)}
-                >
-                  İNCELE
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
       </header>
 
-    
-        <BestSellProducts />
-      
+      <ProductCategories />
+
+      <BestSellProducts />
 
       <div className="relative z-10 w-full h-auto figure">
         <img

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import logo from "../assets/logo-siyah.png";
+import logo from "../../assets/logo-siyah.png";
 import { PiShoppingCartLight } from "react-icons/pi";
-import MenuMobil from "./MenuMobil";
+import MenuMobil from "./MenuNavbarMobil";
 
 const MobilCartIcon = () => {
     return (
