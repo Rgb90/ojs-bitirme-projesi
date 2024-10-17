@@ -1,14 +1,14 @@
-import ProductItem from "./ProductItem";
-import bestSellData, { BestSell } from "../BestSellData"; // Product tipi import ediliyor
+import BestSellerItem from "./BestSellerItem";
+import bestSellData, { BestSell } from "../types/BestSellData";
 
-const BestSellProducts = () => {
+const BestSeller = () => {
   return (
     <>
      <h2 className="text-2xl font-bold text-center">ÇOK SATANLAR</h2>
       {/* Grid yapısı */}
       <div className="max-w-6xl sm:max-w-screen mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 p-4 sm:p-6 mb-2">
         {bestSellData.map((bestSell: BestSell) => (
-          <ProductItem
+          <BestSellerItem
           key={bestSell.id}
           id={bestSell.id}
           src={bestSell.src}
@@ -24,4 +24,4 @@ const BestSellProducts = () => {
   );
 };
 
-export default BestSellProducts;
+export default BestSeller;

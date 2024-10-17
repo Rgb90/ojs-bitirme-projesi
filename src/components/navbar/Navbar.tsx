@@ -5,9 +5,9 @@ import { FaCaretDown } from "react-icons/fa";
 import logo from "../../assets/logo-siyah.png";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import MobilCartIcon from "./MobilCartIcon";
-import NavbarMenu from "./MenuNavbarWeb";
-import NavbarInfoWeb from "./InfoNavbarWeb";
-import NavbarInfoMd from "./InfoNavbarMobil";
+import MenuNavbarWeb from "./MenuNavbarWeb";
+import InfoNavbarWeb from "./InfoNavbarWeb";
+import InfoNavbarMobil from "./InfoNavbarMobil";
 
 function Navbar() {
   return (
@@ -16,7 +16,7 @@ function Navbar() {
       <MobilCartIcon />
 
       {/* input ve buttonlar desktop için */}
-      <div className="max-w-8xl sm:max-w-screen mx-auto items-center md:flex hidden p-4">
+      <div className="mx-auto items-center md:flex hidden p-4">
         {/* Logo */}
         <Link className="md:pl-20 lg:pl-52" to="/">
           <img className="" src={logo} alt="Brand-logo" />
@@ -80,11 +80,11 @@ function Navbar() {
         </div>
       </div>
 
-      <NavbarMenu />
+      <MenuNavbarWeb />
 
-      <NavbarInfoWeb />
+      <InfoNavbarWeb />
 
-      <NavbarInfoMd />
+      <InfoNavbarMobil />
     </nav>
   );
 }

@@ -1,9 +1,9 @@
-import Img1 from '../../assets/whey-protein.png';
-import Img2 from "../../assets/fitnespaketi.png";
-import Img3 from "../../assets/günlükvitamin.png";
-import Img4 from "../../assets/pre-workout.png";
-import Img5 from "../../assets/cream.png";
-import Img6 from "../../assets/creatine.png";
+import Img1 from '../../../assets/whey-protein.png';
+import Img2 from "../../../assets/fitnespaketi.png";
+import Img3 from "../../../assets/günlükvitamin.png";
+import Img4 from "../../../assets/pre-workout.png";
+import Img5 from "../../../assets/cream.png";
+import Img6 from "../../../assets/creatine.png";
 
 export interface BestSell {
   id: number;

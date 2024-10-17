@@ -51,11 +51,11 @@ const ProductCategories = () => {
               alt={category.name}
               className="w-full h-auto rounded-md object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h2 className="text-white text-xl font-bold">{category.name}</h2>
+            <div className="absolute inset-0 flex flex-col justify-center items-end pr-4">
+              <h2 className="text-black text-xl font-semibold">{category.name}</h2>
               <Link to={category.link}>
-                <button className="mt-4 bg-white text-black py-2 px-4 rounded">
-                  Detaylı İncele
+                <button className="mt-4 text-white font-bold bg-black py-1 px-6 rounded">
+                  İncele
                 </button>
               </Link>
             </div>

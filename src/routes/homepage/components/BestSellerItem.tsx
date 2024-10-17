@@ -1,6 +1,6 @@
-import { BestSell } from "../BestSellData";
+import { BestSell } from "../types/BestSellData";
 
-function ProductItem({ src, alt, title, description, comment, price }: BestSell) {
+function BestSellerItem({ src, alt, title, description, comment, price }: BestSell) {
   return (
     <div className="flex flex-col justify-between h-full p-4 bg-white">
       {/* Üst Kısım */}
@@ -36,4 +36,4 @@ function ProductItem({ src, alt, title, description, comment, price }: BestSell)
   );
 }
 
-export default ProductItem;
+export default BestSellerItem;

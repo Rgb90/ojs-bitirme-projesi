@@ -5,8 +5,8 @@ const MenuNavbarWeb = () => {
 
   return (
     <div className="bg-black hidden md:block">
-      <div className="container mx-auto max-w-7xl p-2">
-        <ul className="flex justify-center items-center space-x-2 sm:space-x-6 md:space-x-10 lg:space-x-36 mx-auto">
+      <div className="container mx-auto max-w-2xl md:max-w-2xl lg:max-w-6xl py-2">
+        <ul className="flex justify-between">
 
           {/* Menüler */}
           <Menu as="div" className="relative inline-block">
