@@ -37,9 +37,9 @@ function HomePage() {
       <SliderComments />
 
       <section className="bg-black text-white p-6 w-full">
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-16 flex flex-col lg-tablet:px-24">
           <div className="flex justify-between items-center md:mb-8">
-            <div className="flex items-center gap-2 ml-2 lg:ml-16">
+            <div className="flex items-center gap-2">
               <div className="flex mb-1">
                 {Array.from({ length: 5 }, (_, i) => (
                   <svg
@@ -62,8 +62,11 @@ function HomePage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-2 gap-4">
-            <div className="flex flex-col md:w-[348px] md:h-[300px] lg:w-[452px] lg:h-[150px] ml-0 lg:ml-14">
+
+          {/* İçerik bölümü */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
+            {/* Sol kısım */}
+            <div className="flex flex-col justify-center ">
               <p className="text-2xl font-medium">
                 LABORATUVAR TESTLİ ÜRÜNLER
                 <br />
@@ -72,7 +75,9 @@ function HomePage() {
                 MEMNUNİYET GARANTİSİ
               </p>
             </div>
-            <div className="flex flex-col md:w-[348px] md:h-[300px] lg:w-[452px] lg:h-[150px]">
+
+            {/* Sağ kısım */}
+            <div className="flex flex-col justify-center ">
               <p className="text-lg md:text-base font-light">
                 200.000'den fazla ürün yorumumuza dayanarak,
                 <br />
@@ -86,6 +91,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
     </>
   );
 }

@@ -4,19 +4,18 @@ import FooterMobil from "./FooterMobil";
 function Footer() {
   return (
     <>
-      <div className="">
+      <div className="phone:block hidden">
         <FooterMobil />
       </div>
 
-      {/* Footer sadece orta ve büyük ekranlarda görünecek */}
-      <footer className="hidden md:block bg-black text-white">
-        <div className="container mx-auto flex justify-between w-[1200px]">
-          {/* Left Column */}
-          <div>
+      <footer className="hidden md:block bg-black text-white w-full">
+        <div className="container mx-auto flex lg-tablet:px-24 tablet:gap-x-40 laptop:gap-x-80">
+          {/* Left */}
+          <div className="flex flex-col">
             <div className="mb-4">
               <img src={logobeyaz} alt="Logo" width="132" height="30" />
             </div>
-            <ul className="text-sm text-gray-500">
+            <ul className="text-sm text-gray-500 mb-32">
               {[
                 "İletişim",
                 "Hakkımızda",
@@ -33,9 +32,13 @@ function Footer() {
                 </li>
               ))}
             </ul>
+            {/* Copyright */}  
+            <div className="text-xs text-gray-500 mb-5">
+              Copyright © - Tüm Hakları Saklıdır.
+            </div>
           </div>
 
-          {/* Middle Column */}
+          {/* Middle */}
           <div>
             <h3 className="text-lg font-bold mb-4">Kategoriler</h3>
             <ul className="text-sm text-gray-500">
@@ -57,7 +60,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Right Column */}
+          {/* Right */}
           <div>
             <h3 className="text-lg font-bold mb-4">Popüler Ürünler</h3>
             <ul className="text-sm text-gray-500">
@@ -78,11 +81,6 @@ function Footer() {
               ))}
             </ul>
           </div>
-        </div>
-        <div className="mt-8 md:ml-14 lg:ml-48 p-6">
-          <p className="text-xs text-gray-500">
-            Copyright © - Tüm Hakları Saklıdır.
-          </p>
         </div>
       </footer>
     </>

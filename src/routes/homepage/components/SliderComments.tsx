@@ -38,8 +38,8 @@ const SliderComments = () => {
     }); 
     
     return (
-        <div className="container mx-auto">
-            <div className="mt-10">
+        <div className="container mx-auto w-full px-4 lg-tablet:px-24 mb-10">
+            <div className="px-2 mt-6">
                 <div className="flex justify-between items-center">
                     <h4 className="text-sm font-semibold text-gray-700 ml-5">
                         GERÇEK MÜŞTERİ YORUMLARI
@@ -116,10 +116,10 @@ const SliderComments = () => {
                     <div className="blaze-track-container">
                         <div className="blaze-track">
                             {sliderCommentData.map((comment) => (
-                                <div key={comment.id} className="flex flex-col mb-10 p-4">
-                                    <p className="text-xs text-gray-500 italic">{comment.date}</p>
+                                <div key={comment.id} className="flex flex-col mb-10 p-4 h-full">
+                                    <p className="text-xs text-gray-700 italic">{comment.date}</p>
                                     <h5 className="text-sm font-semibold">{comment.title}</h5>
-                                    <p className="text-sm">{comment.comment}</p>
+                                    <p className="text-xs text-gray-700 italic">{comment.comment}</p>
                                 </div>
                             ))}
                         </div>

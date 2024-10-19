@@ -11,10 +11,3 @@
     display: flex;
     transition: transform 0.3s ease-in-out;
 }
-
-@media (max-width: 500px) {
-    .blaze-track > div {
-        flex: 1 0 100%; /* Küçük ekranlarda her öğe %100 genişlikte olacak */
-        max-width: 100%;
-    }
-}
