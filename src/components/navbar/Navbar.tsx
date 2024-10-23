@@ -16,9 +16,10 @@ function Navbar() {
       <MobilCartIcon />
 
       {/* input ve buttonlar desktop için */}
-      <div className="mx-auto items-center md:flex hidden p-4">
+      <div className="container mx-auto w-full items-center md:flex hidden p-4 justify-evenly">
         {/* Logo */}
-        <Link className="md:pl-20 lg:pl-52" to="/">
+        <Link className="" to="/">
+        
           <img className="" src={logo} alt="Brand-logo" />
         </Link>
 
