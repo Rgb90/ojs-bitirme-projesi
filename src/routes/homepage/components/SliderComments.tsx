@@ -1,7 +1,7 @@
 import "blaze-slider/dist/blaze.css";
 import { useBlazeSlider } from "../hooks/useBlazeSlider";
 import sliderCommentData from "../types/SliderCommentData";
-import "./SliderComments.css"
+/* import "./SliderComments.css" */
 
 const SliderComments = () => {
 /*      const { sliderElRef } = useBlazeSlider({

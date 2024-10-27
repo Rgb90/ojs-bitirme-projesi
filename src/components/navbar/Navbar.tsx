@@ -7,19 +7,23 @@ import MobilCartIcon from "./MobilCartIcon";
 import MenuNavbarWeb from "./MenuNavbarWeb";
 import InfoNavbarWeb from "./InfoNavbarWeb";
 import InfoNavbarMobil from "./InfoNavbarMobil";
+import { useBasketStore } from "../../stores/useBasketStore"; // Store'u import et
 
 function Navbar() {
+  const basket = useBasketStore((state) => state.basket);
+  const increase = useBasketStore((state) => state.increase); // cart state'ini al
+  
   return (
     <nav>
       <MobilCartIcon />
 
       {/* input ve buttonlar desktop için */}
-      <div className="container mx-auto w-full items-center md:flex hidden p-4 justify-evenly">
+      <div className="container mx-auto w-full items-center md:flex hidden p-2 px-10 lg-tablet:px-20 justify-between">
         {/* Logo */}
-        <Link className="" to="/">
+        <Link className="ml-4" to="/">
           <img className="" src={logo} alt="Brand-logo" />
         </Link>
-        <div className="hidden md:flex flex-col md:flex-row items-center justify-center mt-4 md:mt-0 w-full space-x-6 text-sm">
+        <div className="hidden md:flex flex-col md:flex-row items-center justify-end mt-4 md:mt-0 w-full space-x-6 text-sm">
           <div className="flex items-center max-w-screen md:w-4/12">
             <input
               type="search"
@@ -34,36 +38,41 @@ function Navbar() {
             </button>
           </div>
 
-
-          <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-          </svg>
+          <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" 
+          className="flex justify-between items-center bg-white h-8 md:h-10 px-4 text-gray-500 border-2 border-gray-500 rounded hover:bg-gray-50 w-full lg:w-[135px] md:w-[115px]" type="button">
+            <FaRegUser className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+              HESAP
+              <FaCaretDown
+                aria-hidden="true"
+                className="-mr-1 h-4 w-4 md:h-5 md:w-5"
+              />
           </button>
 
           <div id="dropdownDelay" className="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
             <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Giriş yap</a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-              </li>
-              <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-              </li>
-              <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Üye ol</a>
               </li>
             </ul>
           </div>
 
-
-          <Link to="/cart" className="flex-shrink-0">
+          <Link to="/cart" className="relative flex-shrink-0">
             <button className="bg-gray-500 h-8 md:h-10 text-white border rounded flex items-center justify-center hover:bg-gray-400 w-full lg:w-[190px] md:w-[111px]">
+            <div className="relative"> {/* İkon kapsayıcısı */}
               <PiShoppingCartLight className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+              {(basket === 0 || basket > 0) && (
+                <span className="bg-red-500 text-white w-5 h-5 flex justify-center items-center rounded-full absolute -top-2 -right-0 text-xs">
+                  {basket}
+                </span>
+              )}
+              </div>
               SEPET
             </button>
           </Link>
+          <button onClick={increase}>artır</button>
         </div>
       </div>
 
@@ -105,11 +114,8 @@ function Navbar() {
         </form>
       </div>
 
-
       <MenuNavbarWeb />
-
       <InfoNavbarWeb />
-
       <InfoNavbarMobil />
     </nav>
   );

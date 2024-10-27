@@ -13,10 +13,12 @@ const BestSeller = () => {
           id={bestSell.id}
           src={bestSell.src}
           alt={bestSell.alt}
+          sale={bestSell.sale}
           title={bestSell.title}
           description={bestSell.description}
           comment={bestSell.comment}
           price={bestSell.price}
+          oldPrice={bestSell.oldPrice}
         />
       ))}
     </div>
