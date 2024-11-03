@@ -11,7 +11,6 @@ import { useBasketStore } from "../../stores/useBasketStore"; // Store'u import 
 
 function Navbar() {
   const basket = useBasketStore((state) => state.basket);
-  const increase = useBasketStore((state) => state.increase); // cart state'ini al
   
   return (
     <nav>
@@ -72,7 +71,6 @@ function Navbar() {
               SEPET
             </button>
           </Link>
-          <button onClick={increase}>artır</button>
         </div>
       </div>
 

@@ -8,7 +8,7 @@ function Footer() {
         <FooterMobil />
       </div>
 
-      <footer className="hidden md:block bg-black text-white w-full">
+      <footer className="hidden md:block bg-black text-white w-full py-6">
         <div className="container mx-auto flex lg-tablet:px-24 tablet:gap-x-40 laptop:gap-x-80">
           {/* Left */}
           <div className="flex flex-col">

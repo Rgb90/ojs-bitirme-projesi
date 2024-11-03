@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage, Root, CartPage, AccountPage } from "./routes"
+import { HomePage, Root, CartPage, AccountPage, ProductDetailPage } from "./routes"
 import "./index.css"
 
 
@@ -15,6 +15,10 @@ const router = createBrowserRouter([
       {
       index: true,
       element: <HomePage />
+      },
+      {
+        path: "/product",
+        element: <ProductDetailPage />,
       },
       {
         path: "/cart",
