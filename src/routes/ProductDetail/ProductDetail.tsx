@@ -1,5 +1,5 @@
 import urunDetay from "../../assets/urunDetay.png"
-import Stars from "./components/Stars";
+import Stars from "../../components/stars/Stars";
 import AromaButton from "./components/AromaButton";
 import BoyutButton from "./components/BoyutButton";
 import AddToBasket from "./components/AddToBasket";
@@ -17,7 +17,7 @@ interface ProductDetailProps {
   imageUrl: string;
 }
 
-const ProductDetailPage = () => {
+const ProductDetail = () => {
   const productData: ProductDetailProps = {
     title: "WHEY PROTEIN",
     description: "EN ÇOK TERCİH EDİLEN PROTEİN TAKVİYESİ",
@@ -26,7 +26,7 @@ const ProductDetailPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-4">
+    <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-2">
       <div className="md:ml-[50px] ">
         <div className="grid md:grid-cols-2 gap-12 ">
           <div>
@@ -98,4 +98,4 @@ const ProductDetailPage = () => {
   );
 };
 
-export default ProductDetailPage;
+export default ProductDetail;

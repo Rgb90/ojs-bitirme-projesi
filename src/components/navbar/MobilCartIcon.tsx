@@ -6,10 +6,9 @@ import { useBasketStore } from '../../stores/useBasketStore';
 
 const MobilCartIcon = () => {
     const basket = useBasketStore((state) => state.basket);
-    const increase = useBasketStore((state) => state.increase); // cart state'ini al
 
     return (
-        <div className="flex items-center justify-between py-2 px-4 md:hidden lg:hidden">
+        <div className="flex items-center justify-between py-3 px-4 md:hidden lg:hidden">
             <MenuNavbarMobil />
 
             <Link className="flex-shrink-0 mx-auto" to="/">
@@ -26,7 +25,6 @@ const MobilCartIcon = () => {
               )}
                 </Link>
             </div>
-            <button onClick={increase}>artır</button>
         </div>
     );
 };

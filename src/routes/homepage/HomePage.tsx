@@ -1,4 +1,6 @@
-import sliderBanner from "../../assets/slider-banner.svg"; // Büyük banner resmi
+import InfoHeaderWeb from "./components/InfoHeaderWeb";
+import InfoHeaderMobil from "./components/InfoHeaderMobil";
+import sliderBanner from "../../assets/slider-banner.svg";
 import figure from "../../assets/figure.png";
 import logobeyaz from "../../assets/logo-beyaz.png";
 import ProductCategories from "./components/ProductCategories";
@@ -9,6 +11,8 @@ function HomePage() {
   return (
     <>
       <header>
+      <InfoHeaderWeb />
+      <InfoHeaderMobil />
         <div className="w-full mb-2">
           <img
             src={sliderBanner}
