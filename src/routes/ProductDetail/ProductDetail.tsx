@@ -1,14 +1,14 @@
-import urunDetay from "../../assets/urunDetay.png"
-import Stars from "../../components/stars/Stars";
+import urunDetay from "../../assets/urunDetay.png";
+import Stars from "../../components/Stars/Stars";
 import AromaButton from "./components/AromaButton";
 import BoyutButton from "./components/BoyutButton";
 import AddToBasket from "./components/AddToBasket";
-import truckfast from "./assets/truckfast.png";
-import trust from "./assets/trust.png";
-import satisfaction from "./assets/satisfaction.png";
 import ProductInfoAccordion from "./components/ProductInfoAccordion";
 import LastViewedProducts from "./components/LastViewedProducts";
 import CommentSection from "./components/CommentSection";
+import "./ProductDetail.css"; 
+import AddToBasketTablet from "./components/AddToBasketTablet";
+import BestSeller from "../HomePage/components/BestSeller";
 
 interface ProductDetailProps {
   title: string;
@@ -27,10 +27,17 @@ const ProductDetail = () => {
 
   return (
     <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24 py-2">
-      <div className="md:ml-[50px] ">
-        <div className="grid md:grid-cols-2 gap-12 ">
-          <div>
-            <img src={productData.imageUrl} alt={productData.title} />
+      <div className="md:ml-[50px]">
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="flex-row">
+            <div className="md:mb-5">
+              <img src={productData.imageUrl} alt={productData.title} />
+            </div>
+
+            {/* ProductInfoAccordion sadece 720px-1200px arasında görünür */}
+            <div className="accordion-720-1200">
+              <ProductInfoAccordion />
+            </div>
           </div>
 
           <div className="md:ml-[25px]">
@@ -52,48 +59,29 @@ const ProductDetail = () => {
             <hr className="border-gray-300" />
 
             <AromaButton />
-
             <BoyutButton />
 
-            {/* Fiyat ve servis başına maliyet alanı */}
-            <div className="flex justify-between items-center py-2">
-              <h3 className="text-2xl font-bold text-black">549 TL</h3>
-              <p className="text-sm font-semibold text-black">34.31 TL/Servis</p>
+            {/* sadece 720px altı ve 1200px üstü ekranlarda görünsün */}
+            <div className="accordion-below-720-above-1200">
+              <AddToBasket />
             </div>
 
-            <AddToBasket />
-
-            <div className="grid grid-cols-3 gap-4 py-4">
-              <div className="flex items-center justify-center">
-                <img src={truckfast} alt="Aynı Gün Ücretsiz Kargo" className="w-8 h-8 mr-2" />
-                <p className="text-xs flex flex-col items-center">
-                  <span>Aynı Gün</span><span> Ücretsiz Kargo</span>
-                </p>
-              </div>
-              <div className="flex items-center justify-center">
-                <img src={trust} alt="750.000+ Mutlu Müşteri" className="w-8 h-8 mr-2" />
-                <p className="text-xs flex flex-col items-center">
-                  <span>750.000+</span><span>Mutlu Müşteri</span>
-                </p>
-              </div>
-              <div className="flex items-center justify-center">
-                <img src={satisfaction} alt="Memnuniyet Garantisi" className="w-8 h-8 mr-2" />
-                <p className="text-xs flex flex-col items-center">
-                  <span>Memnuniyet</span><span>Garantisi</span>
-                </p>
-              </div>
+            {/* ProductInfoAccordion sadece 720px altı ve 1200px üstü ekranlarda görünsün */}
+            <div className="accordion-below-720-above-1200">
+              <ProductInfoAccordion />
             </div>
-
-            <ProductInfoAccordion />
-
           </div>
         </div>
       </div>
 
+      {/* sadece 720px-1200px arasında görünür */}
+      <div className="accordion-720-1200">
+        <AddToBasketTablet />
+      </div>
+
       <LastViewedProducts />
-
       <CommentSection />
-
+      <BestSeller />
     </div>
   );
 };

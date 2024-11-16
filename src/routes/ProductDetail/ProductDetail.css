@@ -1,0 +1,30 @@
+/* Sadece 720px altı ve 1200px üstü ekranlarda görünür */
+.accordion-below-720-above-1200 {
+    display: block;
+  }
+  
+  /* 720px ile 1200px arasındaki ekranlarda gizle */
+  @media (min-width: 720px) and (max-width: 1200px) {
+    .accordion-below-720-above-1200 {
+      display: none;
+    }
+  }
+  
+  /* Sadece 720px ile 1200px arasındaki ekranlarda görünür */
+  .accordion-720-1200 {
+    display: none;
+  }
+  
+  /* 720px ve üstünde görünür yap */
+  @media (min-width: 720px) and (max-width: 1200px) {
+    .accordion-720-1200 {
+      display: block;
+    }
+  }
+  
+  /* 1200px ve üstünde gizle */
+  @media (min-width: 1200px) {
+    .accordion-720-1200 {
+      display: none;
+    }
+  }

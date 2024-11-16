@@ -1,4 +1,4 @@
-import Stars from "../../../components/stars/Stars";
+import Stars from "../../../components/Stars/Stars";
 import { BestSell } from "../types/BestSellData";
 
 function BestSellerItem({ src, alt, title, description, comment, price, oldPrice, sale }: BestSell) {
