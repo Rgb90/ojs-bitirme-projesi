@@ -1,5 +1,5 @@
 import productListData, { List } from "./types/productlist";
-import Stars from "../../components/stars/Stars";
+import Stars from "../../components/Stars/Stars";
 
 const ProductList = () => {
     return (
@@ -12,7 +12,7 @@ const ProductList = () => {
                             <div className="relative">
                                 <img src={product.src} alt={product.alt} className="object-cover mb-2 w-28 sm:w-36 md:w-40 lg:w-full" />
                                 {product.sale && (
-                                    <span className="bg-red-500 text-white w-auto flex flex-col justify-center items-center absolute top-0 right-0 px-2 py-1">
+                                    <span className="bg-red-500 text-white w-auto flex flex-col justify-center items-center absolute -top-4 sm:top-0 -right-4 sm:right-0 px-2 py-1">
                                         <span className="text-lg font-bold">{product.sale.split(' ')[0]}</span>
                                         <span className="ml-1 text-xs">{product.sale.split(' ')[1]}</span>
                                     </span>
@@ -36,9 +36,9 @@ const ProductList = () => {
                     </div>
                 ))}
             </div>
-            <p className="text-center text-black mb-4">Toplam 16 ürün görüntüleniyor</p>
+            <p className="text-center text-black mb-12">Toplam 16 ürün görüntüleniyor</p>
 
-            <div className="text-center text-black text-sm mb-10">
+            <div className="container mx-auto text-start text-black text-sm mb-10 px-4 xl:px-24">
                 <p>Vücudun tüm fonksiyonlarını sağlıklı bir şekilde yerine getirmesini sağlayan temel yapı taşlarından biri proteindir. Protein kısaca, bir veya daha fazla amino asit artık</p>
                 <a href="#" className="text-blue-600 underline mt-2 inline-block">daha fazla göster</a>
             </div>
